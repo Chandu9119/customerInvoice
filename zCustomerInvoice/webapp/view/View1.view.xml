@@ -1,0 +1,20 @@
+<mvc:View controllerName="com.invoicezCustomInvoice.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:smartTab="sap.ui.comp.smarttable" xmlns:filter="sap.ui.comp.smartfilterbar">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<filter:SmartFilterBar id="smartFilterBarId" entitySet="Invoices" 
+						enableBasicSearch="true">
+						<filter:layoutData>
+							<FlexItemData shrinkFactor="0"/>
+						</filter:layoutData>
+					</filter:SmartFilterBar>
+					<smartTab:SmartTable id="smartTableId" smartFilterId="smartFilterBarId" tableType="ResponsiveTable" showRowCount="true" entitySet="Invoices"></smartTab:SmartTable>
+					<!--<filter:SmartFilterBar id="smartFilterBarId"></filter:SmartFilterBar>-->
+					<!--<smartTab:SmartTable id="smartTableId" entitySet="Invoices" smartFilterId="smartFilterBarId" tableType="ResponsiveTable"></smartTab:SmartTable>-->
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
